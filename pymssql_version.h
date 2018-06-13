@@ -1,1 +1,1 @@
-#define PYMSSQL_VERSION "2.1.3.exp1"
+#define PYMSSQL_VERSION "2.1.3.exp2"
