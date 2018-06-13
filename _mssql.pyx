@@ -1378,7 +1378,8 @@ cdef class MSSQLConnection:
         cdef bytes dbname_bytes = dbname.encode('ascii')
         cdef char *dbname_cstr = dbname_bytes
 
-        dbuse(self.dbproc, dbname_cstr)
+        with nogil:
+            dbuse(self.dbproc, dbname_cstr)
 
 ##################################
 ## MSSQL Stored Procedure Class ##
